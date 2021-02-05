@@ -82,7 +82,7 @@ const LandingSection = () => {
   const classes = useStyle();
 
   return (
-    <div>
+    <div id="home">
       <Grid container spacing={1} style={{ position: "relative", zIndex: 1 }} className={classes.landing}>
         <Grid item container md={6} justify="center" alignItems="center" style={{ zIndex: -1 }}>
           <Box px={4} style={{ width: "700px" }} ref={landingDiv}>

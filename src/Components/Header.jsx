@@ -98,13 +98,13 @@ const Header = () => {
                                 )}
                         </Hidden>
                         <Box px={2} className={classes.linksMain} ref={nav}>
-                            <a href='#' className={classes.linksStyle}>
+                            <a href='#home' className={classes.linksStyle}>
                                 Home
                             </a>
-                            <a href='#' className={classes.linksStyle}>
+                            <a href='#services' className={classes.linksStyle}>
                                 Services
                             </a>
-                            <a href='#' className={classes.linksStyle}>
+                            <a href='#contact' className={classes.linksStyle}>
                                 Contact
                             </a>
                             <Hidden smDown>

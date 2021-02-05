@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../assets/css/App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Box, Button, Paper } from "@material-ui/core";
-import useWebAnimations, { fadeInDown, fadeInLeft} from "@wellyshen/use-web-animations";
 import ShopIcon from "../assets/Images/shopIcon.png";
 import FoodIcon from "../assets/Images/foodIcon.png";
 import DeleveryIcon from "../assets/Images/deleveryIcon.png";
@@ -10,7 +9,7 @@ import DiscountIcon from "../assets/Images/discountIcon.png";
 import { Fade } from 'react-reveal';
 
 const ServicesSection = () => {
-    const [services, setServices] = useState([
+    const services = [
         {
             id: 1,
             title: "Delicious food",
@@ -39,7 +38,7 @@ const ServicesSection = () => {
             description:
               "Lorem Ipsum is simply dummy text of the printing and typesetting ",
           },
-    ]);
+    ];
 
     const useStyle = makeStyles((theme) => ({
         servicesMain: {
@@ -77,10 +76,6 @@ const ServicesSection = () => {
           },
     }));
 
-    const { ref: serviceCards } = useWebAnimations({
-        ...fadeInLeft,
-    });
-
     const classes = useStyle();
     return (
         <div className={classes.servicesMain} id="services">
@@ -93,7 +88,7 @@ const ServicesSection = () => {
                                     <Box px={2} py={3}>
                                         <div>
                                             <Box mb={1}>
-                                                <img src={service.image} width="70px" height="70px" />
+                                                <img src={service.image} width="70px" height="70px" alt={service.title}/>
                                             </Box>
                                             <Typography gutterBottom variant="h6">
                                                 <b>{service.title}</b>

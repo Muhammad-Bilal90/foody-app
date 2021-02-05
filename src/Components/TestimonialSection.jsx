@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Mantesto from "../assets/Images/testoman.png";
@@ -6,7 +6,7 @@ import Wonmentesto from "../assets/Images/testowomen.png";
 import { Fade } from 'react-reveal';
 
 const TestimonialSection = () => {
-    const [card, setCard] = useState([
+    const card = [
         {
           id: 1,
           name: "Ahmed Maaz",
@@ -21,7 +21,7 @@ const TestimonialSection = () => {
           description:
             "Lorem Ipsum is simply dummy text of the printing andtypesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown",
         },
-      ]);
+      ];
 
       const useStyle = makeStyles((theme) => ({
           root: {
