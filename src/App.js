@@ -1,23 +1,24 @@
 import React from "react";
 import Header from "./Components/Header";
-import Index from "./Pages/index";
+import LandingSection from "./Components/LandingSection";
+import ServicesSection from "./Components/ServicesSection";
+import ContactSection from "./Components/ContactSection";
+import TestimonialSection from "./Components/TestimonialSection";
 import Footer from "./Components/Foot";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core";
 import { Theme } from "./theme";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <MuiThemeProvider theme={Theme}>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Index />} />
-          </Routes>
-          <Footer />
-        </MuiThemeProvider>
-      </Router>
+      <MuiThemeProvider theme={Theme}>
+      <Header />
+      <LandingSection />
+      <ServicesSection />
+      <ContactSection />
+      <TestimonialSection />
+      <Footer />
+      </MuiThemeProvider>
     </div>
   );
 }
