@@ -5,9 +5,32 @@ import { makeStyles } from "@material-ui/core/styles";
 import FacebookIcon from "../assets/Images/facebook.png";
 import TwitterIcon from "../assets/Images/twitter.png";
 import GmailIcon from "../assets/Images/google-plus.png";
-import { Fade } from 'react-reveal';
+// import useWebAnimations, { fadeInDown, fadeInRight } from "@wellyshen/use-web-animations"
+import Fade from "react-reveal/Fade";
 
 const ContactSection = () => {
+
+    // const { keyframes, timing } = fadeInDown
+    // const { ref: formContent1 } = useWebAnimations({
+    //     keyframes,
+    //     timing: {
+    //         ...timing,
+    //         delay: 500,
+    //     }
+    // });
+
+    // const { ref: formContent2 } = useWebAnimations({
+    //     keyframes,
+    //     timing: {
+    //         ...timing,
+    //         delay: 700,
+    //     }
+    // });
+
+    // const { ref: contactForm } = useWebAnimations({
+    //     ...fadeInRight,
+    // });
+
     const useStyle = makeStyles((theme) => ({
         root: {
             position: "relative",
@@ -98,11 +121,11 @@ const ContactSection = () => {
                             </Typography>
                         </Box>
                     </Fade>
-                    <Fade down delay={700}>
+                    <Fade down delay={800}>
                         <img src={FacebookIcon} className={classes.socialIcons} alt="Facebook" width="30px" height="30px" />
                         <img src={GmailIcon} className={classes.socialIcons} alt="Gmail" width="30px" height="30px" />
-                        <img src={TwitterIcon} className={classes.socialIcons} alt="Twitter" width="30px" height="30px" />
-                    </Fade>        
+                        <img src={TwitterIcon} className={classes.socialIcons} alt="Twitter" width="30px" height="30px" />        
+                    </Fade>
                     </div>    
                 </Grid>
                 <Grid item container md={5} className={classes.contactForm}>

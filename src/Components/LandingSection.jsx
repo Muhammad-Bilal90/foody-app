@@ -64,16 +64,8 @@ const LandingSection = () => {
     }
   }));
 
-  // const { keyframes: phoneAnumkey, timing: phoneAnumTime } = fadeInRight;
   const { ref: phone } = useWebAnimations({
     ...fadeInRight,
-    // keyframes: phoneAnumkey,
-    // timing: {
-    //   ...phoneAnumTime,
-    //   iterations: 1,
-    //   delay: "1000",
-    //   easing: "ease",
-    // },
   });
 
   const { ref: landingDiv } = useWebAnimations({

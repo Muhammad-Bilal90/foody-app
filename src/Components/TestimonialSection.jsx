@@ -3,9 +3,19 @@ import { Grid, Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Mantesto from "../assets/Images/testoman.png";
 import Wonmentesto from "../assets/Images/testowomen.png";
-import { Fade } from 'react-reveal';
+// import useWebAnimations, { fadeIn, fadeInUp } from "@wellyshen/use-web-animations";
+import Fade from 'react-reveal/Fade';
 
 const TestimonialSection = () => {
+
+    // const { ref: testimonialHeading } = useWebAnimations({
+    //     ...fadeIn,
+    // });
+
+    // const { ref: testimonialCard } = useWebAnimations({
+    //     ...fadeInUp,
+    // });
+
     const card = [
         {
           id: 1,
@@ -48,17 +58,17 @@ const TestimonialSection = () => {
       return (
           <div>
               <Box mt={12} pb={4} >
-                <Fade>
+                  <Fade>
                     <Typography align="center" className={classes.testimonialHeading}>
                         Testimonial
                     </Typography>
-                </Fade>  
+                  </Fade>   
               </Box>
               <Grid container spacing={2} className={classes.root}>
                   {card.map((person) => (
-                    <Grid key={person.id} item container md={6} xs={12} justify="center">
+                    <Grid key={person.id} item container md={6} xs={12} justify="center" >
                         <Fade up>
-                            <Box p={2} className={classes.testimonialCard}>
+                            <Box p={2} className={classes.testimonialCard} >
                                 <Box pt={2} pl={6} mb={1}>
                                     <Grid container spacing={2}>
                                         <Grid item container xs={1} alignItems="center" justify="flex-end">
@@ -75,7 +85,7 @@ const TestimonialSection = () => {
                                     </Typography>
                                 </Box>
                             </Box>
-                        </Fade>    
+                        </Fade>       
                     </Grid>
                     ))}
               </Grid>

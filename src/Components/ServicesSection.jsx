@@ -6,9 +6,48 @@ import ShopIcon from "../assets/Images/shopIcon.png";
 import FoodIcon from "../assets/Images/foodIcon.png";
 import DeleveryIcon from "../assets/Images/deleveryIcon.png";
 import DiscountIcon from "../assets/Images/discountIcon.png";
-import { Fade } from 'react-reveal';
+// import useWebAnimations, { fadeInLeft, fadeInDown } from "@wellyshen/use-web-animations";
+import Fade from 'react-reveal/Fade';
 
 const ServicesSection = () => {
+
+    // const { keyframes, timing } = fadeInDown
+    // const { ref: serviceText1 } = useWebAnimations({
+    //     keyframes,
+    //     timing: {
+    //         ...timing,
+    //         delay: 500,
+    //     }
+    // });
+
+    // const { ref: serviceText2 } = useWebAnimations({
+    //     keyframes,
+    //     timing: {
+    //         ...timing,
+    //         delay: 600,
+    //     }
+    // });
+
+    // const { ref: serviceText3 } = useWebAnimations({
+    //     keyframes,
+    //     timing: {
+    //         ...timing,
+    //         delay: 800,
+    //     }
+    // });
+
+    // const { ref: serviceText4 } = useWebAnimations({
+    //     keyframes,
+    //     timing: {
+    //         ...timing,
+    //         delay: 1000,
+    //     }
+    // });
+
+    // const { ref: serviceMain } = useWebAnimations({
+    //     ...fadeInLeft
+    // });
+
     const services = [
         {
             id: 1,
